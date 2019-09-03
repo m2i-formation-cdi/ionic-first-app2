@@ -6,9 +6,74 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+  <h1>Hello world</h1>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size=8>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+
+      <ion-col>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button color="danger" expand="block">Go</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  <ion-list>
+    <ion-list-header>
+      Fruits
+    </ion-list-header>
+    <ion-item-group>
+      <ion-item-divider>P</ion-item-divider>
+      <ion-item>
+        <ion-icon name="logo-apple" color="primary" slot="end"></ion-icon>
+        Pommes
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <ion-img src="/assets/img/pears.jpg"></ion-img>
+        </ion-avatar>
+        Poires
+      </ion-item>
+    </ion-item-group>
+
+    <ion-item-group>
+      <ion-item-divider>O</ion-item-divider>
+      <ion-item-sliding>
+        <ion-item>Oranges</ion-item>
+
+        <ion-item-options side="end">
+          <ion-button>
+            <ion-icon name="trash"></ion-icon>
+          </ion-button>
+        </ion-item-options>
+
+      </ion-item-sliding>
+
+    </ion-item-group>
+  </ion-list>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title>
+      mon super footer
+    </ion-title>
+  </ion-toolbar>
+</ion-footer>

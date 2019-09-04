@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NavController, Events } from '@ionic/angular';
+import { HelloService } from '../services/hello.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,21 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  constructor(private navCtrl:NavController, 
+              private events:Events,
+              private hello:HelloService) {
+    events.subscribe("ev", (data)=>{
+      console.log("ev capturé");
+      console.log(data);
+    });
+  }
+
+  goToForm(){
+    this.navCtrl.navigateForward("/form");
+  }
+
+  ionViewDidEnter(){
+    console.log(this.hello.greet());
+  }
 
 }

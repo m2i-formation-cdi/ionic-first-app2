@@ -10,6 +10,8 @@
 
 <ion-content padding>
 
+  {{ 'lady ada lovelace' | capitalize }}
+
   <ion-list>
     <ion-reorder-group [disabled]="isReorderDisabled" (ionItemReorder)="doReorder($event)">
       <ion-item *ngFor="let item of animals" (click)="guess(item)">

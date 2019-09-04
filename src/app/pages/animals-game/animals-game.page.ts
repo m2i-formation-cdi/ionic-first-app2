@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController } from '@ionic/angular';
+import { CapitalizePipe } from '../../pipes/capitalize.pipe';
 
 @Component({
   selector: 'app-animals-game',
@@ -78,6 +79,8 @@ export class AnimalsGamePage implements OnInit {
 
   private media;
 
+  public isReorderDisabled = true;
+
   constructor(private toastCtrl:ToastController) { }
 
   ngOnInit() {
@@ -132,6 +135,11 @@ export class AnimalsGamePage implements OnInit {
 
     toast.present();
 
+  }
+
+  doReorder(even){
+    even.detail.complete(this.animals);
+    console.log(this.animals);
   }
 
 }
